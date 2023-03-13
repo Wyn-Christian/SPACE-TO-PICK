@@ -14,6 +14,10 @@ const router = createBrowserRouter([
             index: true,
             element: <h1>Index Element of Root</h1>,
           },
+          {
+            path: "hatdog",
+            element: <h1>Hatdog Element of Root</h1>,
+          },
         ],
       },
     ],
