@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import Fade from "@mui/material/Fade";
 import { Divider } from "@mui/material";
+import Comment from "../components/Comment";
 
 export async function listingDetailLoader({ params }) {
   let detail = await http
@@ -22,11 +23,12 @@ function ListingDetail() {
   return (
     <Container>
       <Typography textAlign="center" variant="h2">
-        Listing Detail
+        LISTING DETAILS
       </Typography>
       <Paper
         sx={{
           m: "10px auto",
+          p: "10px 0",
           display: "flex",
           alignItems: "center",
           flexDirection: "column",
@@ -53,6 +55,23 @@ function ListingDetail() {
       <Typography textAlign="center" variant="h3">
         Comments
       </Typography>
+
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          m: "auto",
+          rowGap: 2,
+          width: {
+            xs: "100%",
+            md: "800px",
+          },
+        }}
+      >
+        <Comment content="test Comment" />
+        <Comment content="test Comment" />
+      </Box>
     </Container>
   );
 }
